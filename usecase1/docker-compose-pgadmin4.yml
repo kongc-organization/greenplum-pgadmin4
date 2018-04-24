@@ -1,6 +1,6 @@
 version: '3'
 services:
-  sdc:
+  pgadmin4: #https://github.com/postgres/pgadmin4/blob/master/pkg/docker/Dockerfile
     image: dpage/pgadmin4
     hostname: "pgadmin4"
     environment:
