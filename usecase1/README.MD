@@ -8,9 +8,9 @@ pgAdmin is the most popular and feature rich Open Source administration and deve
 
 # Table of Contents
 1. [Pre-requisites](#Pre-requisites)
-2. [Starting Docker-compose](#Starting Docker-compose)
-3. [Configure Greenplum](#Configure Greenplum)
-4. [Configure pgadmin4](#Configure pgadmin4)
+2. [Starting Docker-compose](#Starting-Docker-compose)
+3. [Configure Greenplum](#Configure-Greenplum)
+4. [Configure pgadmin4](#Configure-pgadmin4)
 
 ## Pre-requisites:
 - [docker-compose](http://docs.docker.com/compose)
@@ -69,7 +69,7 @@ CREATE TABLE
 root@gpdbsne:/code/usecase1/data#
 ```
 2. Verify database and table is created.
-Use the command `su - gpadmin`, followed by `psql -U gpadmin -d streamsets_db -c "select count(*) from usertable;"`.  The result shows no records are yet created.
+Use the command `su - gpadmin`, followed by `psql -U gpadmin -d example_db -c "select count(*) from usertable;"`.  The result shows no records are yet created.
 
 Example:
 ```
