@@ -11,7 +11,6 @@ Use cases for database administrator:
 ![alt text](usecase1/images/image2.png "Setup GPDB")
 ![alt text](usecase1/images/image12.png "Dashboard")
 
-# Product:
 ##  Greenplum
 The Greenplum Database (GPDB) is an advanced, fully featured, open source data warehouse. It provides powerful and rapid analytics on petabyte scale data volumes. Uniquely geared toward big data analytics, Greenplum Database is powered by the world’s most advanced cost-based query optimizer delivering high analytical query performance on large data volumes.
 <https://www.greenplum.org>
@@ -19,7 +18,6 @@ The Greenplum Database (GPDB) is an advanced, fully featured, open source data w
 ## pgAdmin
 pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.
 <https://www.pgadmin.org/>
-
 
 
 ## Reference:
