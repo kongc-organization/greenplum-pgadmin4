@@ -44,7 +44,7 @@ $ docker ps
 CONTAINER ID        IMAGE                           COMMAND                  CREATED                  STATUS              PORTS                                                                                                                                NAMES
 a5d6868b53d5        dpage/pgadmin4                  "/entrypoint.sh"         Less than a second ago   Up 4 seconds        0.0.0.0:80->80/tcp, 443/tcp                                                                                                          usecase1_pgadmin4_1
 5ff24222b1f7        kochanpivotal/gpdb5oss:latest   "/docker-entrypoint.…"   27 minutes ago           Up 1 second         0.0.0.0:5005->5005/tcp, 0.0.0.0:5010->5010/tcp, 0.0.0.0:5432->5432/tcp, 0.0.0.0:40000-40002->40000-40002/tcp, 0.0.0.0:9022->22/tcp   gpdbsne
-Kongs-MacBook-Pro:code_spark kochan$
+$
 
 ```
 
@@ -89,3 +89,6 @@ $ psql -U gpadmin -d example_db -c "select count(*) from usertable;"
 ![alt text](images/image12.png "Dashboard")
 
 ```
+
+
+# Reference:
