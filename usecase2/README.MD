@@ -1,6 +1,6 @@
-# Pivotal Greenplum
-The Pivotal Greenplum Database (GPDB) is an advanced, fully featured, open source data warehouse. It provides powerful and rapid analytics on petabyte scale data volumes. Uniquely geared toward big data analytics, Greenplum Database is powered by the world’s most advanced cost-based query optimizer delivering high analytical query performance on large data volumes.
-<https://pivotal.io/pivotal-greenplum>
+#  Greenplum
+The  Greenplum Database (GPDB) is an advanced, fully featured, open source data warehouse. It provides powerful and rapid analytics on petabyte scale data volumes. Uniquely geared toward big data analytics, Greenplum Database is powered by the world’s most advanced cost-based query optimizer delivering high analytical query performance on large data volumes.
+<https://www.greenplum.org>
 
 # pgAdmin
 pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.
@@ -24,20 +24,15 @@ The assumption: docker and docker-compose are already installed on your machine.
 
 ### Run command to start both Greenplum and pgadmin4 instances
 ```
-Kongs-MacBook-Pro:greenplum-pgadmin4 kochan$ ./runDocker.sh -t usecase1 -c up
-Starting usecase1_sdc_1 ... done
-Starting gpdbsne        ... done
-Attaching to usecase1_sdc_1, gpdbsne
-sdc_1    | [2018-04-24 19:06:59 +0000] [1] [INFO] Starting gunicorn 19.7.1
-sdc_1    | [2018-04-24 19:06:59 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)
-sdc_1    | [2018-04-24 19:06:59 +0000] [1] [INFO] Using worker: threads
-sdc_1    | [2018-04-24 19:06:59 +0000] [8] [INFO] Booting worker with pid: 8
-gpdbsne  | /bin/run-parts
-gpdbsne  | Running /docker-entrypoint.d
-gpdbsne  | Running bin/bash -c startGPDB.sh  && bin/bash
-gpdbsne  | SSHD isn't running
-gpdbsne  |  * Starting OpenBSD Secure Shell server sshd                  [ OK ]
-gpdbsne  | SSHD is running...
+$ ./runDocker.sh -t usecase1 -c up
+Creating network "usecase1_mynetwork" with driver "bridge"
+Creating gpdbsne             ... done
+Creating usecase1_pgadmin4_1 ... done
+Attaching to usecase1_pgadmin4_1, gpdbsne
+gpdbsne     | /bin/run-parts
+gpdbsne     | Running /docker-entrypoint.d
+gpdbsne     | Running bin/bash -c startGPDB.sh  && bin/bash
+gpdbsne     | SSHD isn't running
 ...
 ```
 ### How to access Greenplum docker instance:
@@ -45,7 +40,7 @@ You can use this command `docker exec -it gpdbsne bin/bash` to access Greenplum 
 
 For example:
 ```
-Kongs-MacBook-Pro:code_spark kochan$ docker ps
+$ docker ps
 CONTAINER ID        IMAGE                           COMMAND                  CREATED                  STATUS              PORTS                                                                                                                                NAMES
 a5d6868b53d5        dpage/pgadmin4                  "/entrypoint.sh"         Less than a second ago   Up 4 seconds        0.0.0.0:80->80/tcp, 443/tcp                                                                                                          usecase1_pgadmin4_1
 5ff24222b1f7        kochanpivotal/gpdb5oss:latest   "/docker-entrypoint.…"   27 minutes ago           Up 1 second         0.0.0.0:5005->5005/tcp, 0.0.0.0:5010->5010/tcp, 0.0.0.0:5432->5432/tcp, 0.0.0.0:40000-40002->40000-40002/tcp, 0.0.0.0:9022->22/tcp   gpdbsne
