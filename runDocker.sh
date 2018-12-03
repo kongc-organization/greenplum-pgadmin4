@@ -26,6 +26,24 @@ set -e
 #     fi
 #   fi
 # }
+function RunPgadmin4_UseCase2()
+{
+  #echo "[RunPgadmin4_UseCase1] Command:  $1"
+  COMMAND=$1
+
+  if [[ -z "${COMMAND}" ]]; then
+    echo "Missing command"
+    exit -1;
+  else
+    if [[ "${COMMAND}" == "up" ]]; then
+        $DC_PGADMIN4_USE_CASE2_SCRIPT up
+    elif [[ "${COMMAND}" == "down" ]]; then
+        $DC_PGADMIN4_USE_CASE2_SCRIPT down
+    else # default option
+        $DC_PGADMIN4_USE_CASE2_SCRIPT up
+    fi
+  fi
+}
 ################################################################################
 function RunPgadmin4_UseCase1()
 {

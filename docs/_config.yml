@@ -8,16 +8,16 @@
 #baseurl: ""
 #remote_theme: daattali/beautiful-jekyll
 # If you are building a GitHub project page then use these settings:
-url: "http://kongc-organization.github.io/greenplum-streamsets"
-baseurl: "/greenplum-streamsets"
+url: "https://github.com/kongc-organization/greenplum-pgadmin4"
+baseurl: "/greenplum-pgadmin4"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Greenplum and Streamsets
+title: Greenplum with pgadmin4
 
 # Short description of your site
-description: This site provides use cases and examples for Greenplum with Streamsets [greenplum-streamsets](https://kongc-organization.github.io/greenplum-streamsets/)
+description: This site provides use cases and examples for Greenplum with pgadmin4
 
 # --- Navigation bar options --- #
 
@@ -26,8 +26,7 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - Greenplum home: "http://www.greenplum.org"
-    - Streamsets home: "https://streamsets.com/"
-    - Apache Kafka home: "https://kafka.apache.org/"
+    - padmin4 home: "https://www.pgadmin.org/"
     - GitHub Pages: "https://pages.github.com/"
 
 
@@ -102,7 +101,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://kongc-organization.github.io/greenplum-streamsets/"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "https://github.com/kongc-organization/greenplum-pgadmin4"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
